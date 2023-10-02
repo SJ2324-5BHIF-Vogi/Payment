@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0ABEA467-5E99-4E47-BCBC-587C57F8C81E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Payment", "src\Spg.Payment.Payment\Spg.Payment.Payment.csproj", "{59B1BCF0-3B02-4B6B-976F-9148F172E9E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Application", "src\Spg.Payment.Application\Spg.Payment.Application.csproj", "{B702A994-DCD4-4B83-A681-8A72670B735B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Infrastructure", "src\Spg.Payment.Infrastructure\Spg.Payment.Infrastructure.csproj", "{76B6A3BE-0225-4CFD-9544-DC48FFE1326D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.DomainModel", "src\Spg.Payment.DomainModel\Spg.Payment.DomainModel.csproj", "{19C1E7C0-5C66-4EF2-845E-68338C58E9A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Repository", "src\Spg.Payment.Repository\Spg.Payment.Repository.csproj", "{5C928A3E-0418-4D0A-B9C6-43CCF29BCDE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2991B5F9-35AC-4F8C-89F8-7EFDC2C3C1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Payment.Test", "test\Spg.Payment.Payment.Test\Spg.Payment.Payment.Test.csproj", "{F7887D27-4124-4BB0-8A3C-127DE9449258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Application.Test", "test\Spg.Payment.Application.Test\Spg.Payment.Application.Test.csproj", "{297C49AE-0139-48BA-B7E1-5D36186AA7EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.DomainModel.Test", "test\Spg.Payment.DomainModel.Test\Spg.Payment.DomainModel.Test.csproj", "{335EA44A-ED64-484E-999A-C4D57F4C6336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Payment.Repository.Test", "test\Spg.Payment.Repository.Test\Spg.Payment.Repository.Test.csproj", "{E72B8E29-A961-4369-B2B4-CD92AE5D0532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59B1BCF0-3B02-4B6B-976F-9148F172E9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B1BCF0-3B02-4B6B-976F-9148F172E9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B1BCF0-3B02-4B6B-976F-9148F172E9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B1BCF0-3B02-4B6B-976F-9148F172E9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B702A994-DCD4-4B83-A681-8A72670B735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B702A994-DCD4-4B83-A681-8A72670B735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B702A994-DCD4-4B83-A681-8A72670B735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B702A994-DCD4-4B83-A681-8A72670B735B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B6A3BE-0225-4CFD-9544-DC48FFE1326D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B6A3BE-0225-4CFD-9544-DC48FFE1326D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B6A3BE-0225-4CFD-9544-DC48FFE1326D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B6A3BE-0225-4CFD-9544-DC48FFE1326D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C1E7C0-5C66-4EF2-845E-68338C58E9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C1E7C0-5C66-4EF2-845E-68338C58E9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C1E7C0-5C66-4EF2-845E-68338C58E9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C1E7C0-5C66-4EF2-845E-68338C58E9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C928A3E-0418-4D0A-B9C6-43CCF29BCDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C928A3E-0418-4D0A-B9C6-43CCF29BCDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C928A3E-0418-4D0A-B9C6-43CCF29BCDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C928A3E-0418-4D0A-B9C6-43CCF29BCDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7887D27-4124-4BB0-8A3C-127DE9449258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7887D27-4124-4BB0-8A3C-127DE9449258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7887D27-4124-4BB0-8A3C-127DE9449258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7887D27-4124-4BB0-8A3C-127DE9449258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297C49AE-0139-48BA-B7E1-5D36186AA7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297C49AE-0139-48BA-B7E1-5D36186AA7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297C49AE-0139-48BA-B7E1-5D36186AA7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297C49AE-0139-48BA-B7E1-5D36186AA7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335EA44A-ED64-484E-999A-C4D57F4C6336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335EA44A-ED64-484E-999A-C4D57F4C6336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335EA44A-ED64-484E-999A-C4D57F4C6336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335EA44A-ED64-484E-999A-C4D57F4C6336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72B8E29-A961-4369-B2B4-CD92AE5D0532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72B8E29-A961-4369-B2B4-CD92AE5D0532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72B8E29-A961-4369-B2B4-CD92AE5D0532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72B8E29-A961-4369-B2B4-CD92AE5D0532}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59B1BCF0-3B02-4B6B-976F-9148F172E9E5} = {0ABEA467-5E99-4E47-BCBC-587C57F8C81E}
+		{B702A994-DCD4-4B83-A681-8A72670B735B} = {0ABEA467-5E99-4E47-BCBC-587C57F8C81E}
+		{76B6A3BE-0225-4CFD-9544-DC48FFE1326D} = {0ABEA467-5E99-4E47-BCBC-587C57F8C81E}
+		{19C1E7C0-5C66-4EF2-845E-68338C58E9A8} = {0ABEA467-5E99-4E47-BCBC-587C57F8C81E}
+		{5C928A3E-0418-4D0A-B9C6-43CCF29BCDE5} = {0ABEA467-5E99-4E47-BCBC-587C57F8C81E}
+		{F7887D27-4124-4BB0-8A3C-127DE9449258} = {2991B5F9-35AC-4F8C-89F8-7EFDC2C3C1CC}
+		{297C49AE-0139-48BA-B7E1-5D36186AA7EB} = {2991B5F9-35AC-4F8C-89F8-7EFDC2C3C1CC}
+		{335EA44A-ED64-484E-999A-C4D57F4C6336} = {2991B5F9-35AC-4F8C-89F8-7EFDC2C3C1CC}
+		{E72B8E29-A961-4369-B2B4-CD92AE5D0532} = {2991B5F9-35AC-4F8C-89F8-7EFDC2C3C1CC}
+	EndGlobalSection
+EndGlobal
