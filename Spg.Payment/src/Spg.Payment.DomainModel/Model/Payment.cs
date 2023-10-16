@@ -36,7 +36,7 @@ namespace Spg.Payment.DomainModel.Model
         public DateTime ValidTill { get; set; }
         public User? PaidFromUserId { get; set; }
         public int Price { get; set; }
-        public float Discount { get; set; }
+        public int Discount { get; set; }
         public bool Active { get; set; }
     }
 }
