@@ -30,7 +30,7 @@ namespace Spg.Payment.DomainModel.Model
 
         public int PaymentId { get; set; }
         public HashCode Hash { get; set; } = new HashCode(); 
-        private PaifForWahtEnum PaidForWhat { get; set; } = PaifForWahtEnum.None;
+        private PaidForWhatEnum PaidForWhat { get; set; } = PaidForWhatEnum.None;
         public virtual User UserNavigation { get; set; } 
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTill { get; set; }
