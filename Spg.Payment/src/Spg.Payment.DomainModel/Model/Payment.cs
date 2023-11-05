@@ -1,42 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-enum PaidForWhatEnum
-{
-    None, // No Subscription
-    Monthly, // one Month
-    Yearly // twelve Months 
-};
+﻿using Spg.Payment.DomainModel.Enums;
 
 namespace Spg.Payment.DomainModel.Model
 {
     public class Payment
     {
-        public Payment(HashCode hash, User? userNavigation, DateTime validFrom,
-            DateTime validTill, User? paidFromUserId, float price, float discount, bool active)
+        public Payment(User user, PaidForWhatEnum paidForWhat, DateTime validFrom, DateTime validTill, User paidFromUser, int price, int discount)
         {
-            Hash = hash;
-            UserNavigation = userNavigation;
+            UserId = user.Id;
+            UserNavigation = user;
+            PaidForWhat = paidForWhat;
             ValidFrom = validFrom;
             ValidTill = validTill;
-            PaidFromUserId = paidFromUserId;
+            PaidFromUserId = paidFromUser.Id;
+            PaidFromUserNavigation = paidFromUser;
             Price = price;
             Discount = discount;
-            Active = active;
         }
 
-        public int PaymentId { get; set; }
+        public int Id { get; private set; }
         public HashCode Hash { get; set; } = new HashCode(); 
-        private PaidForWhatEnum PaidForWhat { get; set; } = PaidForWhatEnum.None;
+        public int UserId { get; set; }
         public virtual User UserNavigation { get; set; } 
+        public PaidForWhatEnum PaidForWhat { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTill { get; set; }
-        public User? PaidFromUserId { get; set; }
+        public int PaidFromUserId { get; set; }
+        public virtual User PaidFromUserNavigation { get; set; }
         public int Price { get; set; }
         public int Discount { get; set; }
-        public bool Active { get; set; }
+        public bool Active { get; set; } = false;
     }
 }
