@@ -16,7 +16,10 @@ namespace Spg.Payment.DomainModel.Model
 
         public void AddPayment(Payment payment)
         {
-            _payments.Add(payment);
+            if(payment != null)
+            {
+                _payments.Add(payment);
+            }
         }
     }
 }
