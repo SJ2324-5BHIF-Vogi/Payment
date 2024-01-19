@@ -11,10 +11,10 @@ namespace Spg.Payment.DomainModel.Model
         public int Id { get; set; }
         public string Username { get; set; } = string.Empty;
 
-        private List<Payment> _payments = new List<Payment>();
-        public IReadOnlyList<Payment> Payments => _payments;
+        private List<Payments> _payments = new List<Payments>();
+        public IReadOnlyList<Payments> Payments => _payments;
 
-        public void AddPayment(Payment payment)
+        public void AddPayment(Payments payment)
         {
             if(payment != null)
             {

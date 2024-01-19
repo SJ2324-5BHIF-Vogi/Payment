@@ -38,11 +38,38 @@ namespace Spg.Payment.Payment.Controllers
             return Ok();
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public IActionResult Create([FromBody] CreatePaymentDto createPaymentDto)
         {
             _createPaymentValidator.ValidateAndThrow(createPaymentDto);
             return (IActionResult)_mediator.Send(createPaymentDto);
+        }*/
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreatePaymentDto createPaymentDto)
+        {
+            try
+            {
+                // Validate the incoming DTO using FluentValidation
+                _createPaymentValidator.ValidateAndThrow(createPaymentDto);
+
+                // Send the request to the Mediator for handling
+                var paymentId = await _mediator.Send(createPaymentDto);
+
+                // Assuming the Mediator sends back the created payment ID
+                return CreatedAtAction("GetPayment", new { id = paymentId }, null);
+            }
+            catch (ValidationException ex)
+            {
+                // Handle validation errors
+                return BadRequest(ex.Errors);
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                _logger.LogError(ex, "An error occurred while processing the payment creation request.");
+                return StatusCode(500, "Internal Server Error");
+            }
         }
     }
 }

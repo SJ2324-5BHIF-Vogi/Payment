@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace Spg.Payment.DomainModel.Model
 {
-    public class Payment
+    public class Payments
     {
 
 
@@ -21,8 +21,8 @@ namespace Spg.Payment.DomainModel.Model
         public bool Active { get; set; } = false;
 
 
-        public Payment() { }
-        public Payment(User user, PaidForWhatEnum paidForWhat, DateTime validFrom, DateTime validTill, User paidFromUser, int price, int discount)
+        public Payments() { }
+        public Payments(User user, PaidForWhatEnum paidForWhat, DateTime validFrom, DateTime validTill, User paidFromUser, int price, int discount)
         {
             UserId = user.Id;
             UserNavigation = user;
