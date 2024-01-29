@@ -9,17 +9,21 @@ namespace Spg.Payment.DomainModel.Model
     public class User
     {
         public int Id { get; set; }
-        public string Username { get; set; } = string.Empty;
 
-        private List<Payments> _payments = new List<Payments>();
-        public IReadOnlyList<Payments> Payments => _payments;
+        private List<Payment> _payments = new List<Payment>();
+        public IReadOnlyList<Payment> Payments => _payments;
 
-        public void AddPayment(Payments payment)
+        public void AddPayment(Payment payment)
         {
             if(payment != null)
             {
                 _payments.Add(payment);
             }
+        }
+
+        public User(int id)
+        {
+            Id = id;
         }
     }
 }

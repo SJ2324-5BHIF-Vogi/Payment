@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Spg.Payment.Repository.Builder
 {
-    public class UpdateBuilder<T> : IUpdateBuilder<T> where T : Payments
+    public class UpdateBuilder<T> : IUpdateBuilder<T> where T : DomainModel.Model.Payment
     {
         private readonly PaymentContext _paymentContext;
         public T data { get; set; }

@@ -20,7 +20,7 @@ namespace Spg.Payment.Application.Handler
             _repository = repository;
         }
 
-        public async Task<Payments> Handle(CreatePaymentDto request, CancellationToken cancellationToken)
+        public async Task<DomainModel.Model.Payment> Handle(CreatePaymentDto request, CancellationToken cancellationToken)
         {
             // Assuming you have a User entity or some way to identify the user
             var user = GetUserById(request.UserId);
@@ -29,11 +29,11 @@ namespace Spg.Payment.Application.Handler
             {
                 // Handle the case where the user is not found
                 // You might want to throw an exception or return an appropriate response
-                throw new UserNotFoundException($"User with ID {request.UserId} not found.");
+                throw new NotFoundException($"User with ID {request.UserId} not found.");
             }
 
             // Map CreatePaymentDto to your Payments entity
-            Payments payment = new Payments(user, request.PaidForWhat, request.ValidFrom, request.ValidTill, user, request.Price, request.Discount);
+            DomainModel.Model.Payment payment = new DomainModel.Model.Payment(user, request.PaidForWhat, request.ValidFrom, request.ValidTill, user, request.Price, request.Discount);
 
             // Add the payment entity to the repository
             _repository.Add(payment);
@@ -53,7 +53,6 @@ namespace Spg.Payment.Application.Handler
             throw new NotImplementedException();
         }
     }
-}
 }
 
 

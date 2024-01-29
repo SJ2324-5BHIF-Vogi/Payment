@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MediatR;
+using Spg.Payment.DomainModel.Interfaces;
 
 namespace Spg.Payment.Payment.Controllers
 {
@@ -15,19 +16,22 @@ namespace Spg.Payment.Payment.Controllers
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _configuration;
         private readonly ILogger<CheckMarkController> _logger;
+        private readonly IPaymentService _paymentService;
 
-        public CheckMarkController(Mediator mediator, IWebHostEnvironment env, IConfiguration configuration, ILogger<CheckMarkController> logger)
+        public CheckMarkController(Mediator mediator, IWebHostEnvironment env, IConfiguration configuration, ILogger<CheckMarkController> logger, IPaymentService paymentService)
         {
             _mediator = mediator;
             _env = env;
             _configuration = configuration;
             _logger = logger;
+            _paymentService = paymentService;
         }
 
         [HttpGet]
-        public IActionResult IsVerifiedTill()
+        public async Task<IActionResult> IsVerifiedTill([FromQuery] int userId)
         {
-            return Ok();
+            var isVerifiedTill = await _paymentService.IsVerifiedTill(userId);
+            return Ok(isVerifiedTill);
         }
     }
 }

@@ -30,5 +30,4 @@ public class GenericRepository
     {
         return _paymentContext.Set<T>().Find(id);
     }
-
 }

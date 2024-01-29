@@ -10,7 +10,7 @@ namespace Spg.Payment.Infrastructure
 {
     public class PaymentContext : DbContext
     {
-        public DbSet<Payments> Payments => Set<Payments>();
+        public DbSet<Payment.DomainModel.Model.Payment> Payments => Set<Payment.DomainModel.Model.Payment>();
         public DbSet<User> Users => Set<User>();
 
         public PaymentContext(DbContextOptions options)
@@ -23,8 +23,8 @@ namespace Spg.Payment.Infrastructure
         // 4. Methoden ((OnConfiguring), OnModelCreating)
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Payments>().OwnsOne(b => b.PaidFromUserNavigation);
-            builder.Entity<Payments>().OwnsOne(b => b.UserNavigation);
+            builder.Entity<Payment.DomainModel.Model.Payment>().OwnsOne(b => b.PaidFromUserNavigation);
+            builder.Entity<Payment.DomainModel.Model.Payment>().OwnsOne(b => b.UserNavigation);
         }
     }
 }
