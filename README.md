@@ -1,5 +1,4 @@
 # Payment
-<br>
 
 ## Mitglieder
 - Adrian Schauer
