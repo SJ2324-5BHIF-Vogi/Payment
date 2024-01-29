@@ -9,5 +9,6 @@ namespace Spg.Payment.Application.Services
 {
     public class WebhookService: IWebhookService
     {
+
     }
 }
