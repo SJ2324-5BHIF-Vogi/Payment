@@ -6,6 +6,7 @@ using Spg.Payment.Application.Services;
 using Spg.Payment.DomainModel.Interfaces;
 using Spg.Payment.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Spg.Payment.Payment.ExceptionFilter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +49,12 @@ builder.Services.AddDbContext<PaymentContext>(options =>
 });
 
 builder.Services.AddControllers();
+
+builder.Services.AddControllers((register) =>
+{
+    register.Filters.Add<ExceptionFilter>();
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

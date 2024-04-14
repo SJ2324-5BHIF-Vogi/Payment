@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Spg.Payment.Application.Handler
+namespace Spg.Payment.DomainModel.Exceptions
 {
     [Serializable]
     public class NotFoundException : Exception

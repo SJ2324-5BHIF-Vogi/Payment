@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
 using Spg.Payment.Application.Handler;
 using Spg.Payment.DomainModel.Dtos;
+using Spg.Payment.DomainModel.Exceptions;
 using Spg.Payment.DomainModel.Interfaces;
 using Spg.Payment.DomainModel.Model;
 using Spg.Payment.Repository;

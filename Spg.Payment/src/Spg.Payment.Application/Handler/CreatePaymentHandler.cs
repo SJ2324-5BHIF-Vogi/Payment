@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Spg.Payment.DomainModel.Dtos;
+using Spg.Payment.DomainModel.Exceptions;
 using Spg.Payment.DomainModel.Model;
 using Spg.Payment.Repository;
 using System;

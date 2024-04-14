@@ -1,7 +1,9 @@
 ﻿using Bogus.Bson;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Spg.Payment.Application.Handler;
 using Spg.Payment.DomainModel.Enums;
+using Spg.Payment.DomainModel.Exceptions;
 using Spg.Payment.DomainModel.Interfaces;
 using Spg.Payment.DomainModel.Model;
 using Spg.Payment.Repository;
@@ -97,7 +99,7 @@ namespace Spg.Payment.Application.Services
             }
             else
             {
-                throw new Exception("Invalid amount");
+                throw new BadRequestException("Invalid amount");
             }
 
             int userId;
@@ -111,7 +113,7 @@ namespace Spg.Payment.Application.Services
             else
             {
                 _logger.LogInformation($"PaymentIntent Metadata: {paymentIntent.Metadata.TryGetValue("userId", out var tes1)}");
-                throw new Exception("User ID not found");
+                throw new NotFoundException("User ID not found");
             }
 
             var user = _repository.GetAll<User>().FirstOrDefault(p => p.MyUser == userId); ;
