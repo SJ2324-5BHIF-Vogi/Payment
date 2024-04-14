@@ -33,7 +33,7 @@ namespace Spg.Payment.Application.Handler
             }
 
             // Map CreatePaymentDto to your Payments entity
-            DomainModel.Model.Payment payment = new DomainModel.Model.Payment(user, request.PaidForWhat, request.ValidFrom, request.ValidTill, user, request.Price, request.Discount);
+            DomainModel.Model.Payment payment = new DomainModel.Model.Payment(user, request.PaidForWhat, request.ValidFrom, request.ValidTill, request.Price, request.Discount);
 
             // Add the payment entity to the repository
             _repository.Add(payment);

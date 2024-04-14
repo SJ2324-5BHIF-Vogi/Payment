@@ -12,15 +12,15 @@ namespace Spg.Payment.Payment.Controllers
 
     public class CheckMarkController : ControllerBase
     {
-        private readonly Mediator _mediator;
+        //private readonly Mediator _mediator;
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _configuration;
         private readonly ILogger<CheckMarkController> _logger;
         private readonly IPaymentService _paymentService;
 
-        public CheckMarkController(Mediator mediator, IWebHostEnvironment env, IConfiguration configuration, ILogger<CheckMarkController> logger, IPaymentService paymentService)
+        public CheckMarkController(IWebHostEnvironment env, IConfiguration configuration, ILogger<CheckMarkController> logger, IPaymentService paymentService)
         {
-            _mediator = mediator;
+            //_mediator = mediator;
             _env = env;
             _configuration = configuration;
             _logger = logger;

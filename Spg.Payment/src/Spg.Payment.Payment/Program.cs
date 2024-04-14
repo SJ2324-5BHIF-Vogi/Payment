@@ -22,7 +22,7 @@ DbContextOptions options = new DbContextOptionsBuilder()
 .UseSqlite(connectionString)
 .Options;
 PaymentContext db = new PaymentContext(options);
-db.Database.EnsureDeleted();
+//db.Database.EnsureDeleted();
 db.Database.EnsureCreated();
 
 //builder.Services.AddDbContext<TennisBookingContext>(options => options.UseSqlite("Data Source=TennisBooking.db"));
@@ -66,6 +66,7 @@ builder.Services.AddScoped<IValidator<CreatePaymentDto>, CreatePaymentValidator>
 
 #region Services
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IWebhookService, WebhookService>();
 builder.Services.AddScoped(typeof(Spg.Payment.Repository.GenericRepository));
 
 #endregion

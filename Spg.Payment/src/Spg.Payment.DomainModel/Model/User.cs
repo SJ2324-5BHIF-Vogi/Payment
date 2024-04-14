@@ -10,6 +10,8 @@ namespace Spg.Payment.DomainModel.Model
     {
         public int Id { get; set; }
 
+        public int MyUser { get; set; }
+
         private List<Payment> _payments = new List<Payment>();
         public IReadOnlyList<Payment> Payments => _payments;
 
@@ -21,9 +23,13 @@ namespace Spg.Payment.DomainModel.Model
             }
         }
 
-        public User(int id)
+        public User()
         {
-            Id = id;
+        }
+
+        public User(int userId)
+        {
+            MyUser = userId;
         }
     }
 }

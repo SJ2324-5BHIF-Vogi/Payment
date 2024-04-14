@@ -8,5 +8,6 @@ namespace Spg.Payment.DomainModel.Interfaces
 {
     public interface IWebhookService
     {
+        public void HandleStripeWebhook(string json, string endpointSecret, string signature);
     }
 }
